@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Chuột:
+    ten
+    sucKhoe
+    keu(): document.write("chít chít");
+    -->
+<!--
+    Mèo:
+    ten
+    canNang
+    can(abc) {
+        suckhoe của chuột abc bị giảm 10; cân nặng mèo tăng 5;
+        nếu sucKhoe của abc < 0 thì abc keu!
+    }
+
+-->
+<script>
+    class Chuot {
+        ten;
+        sucKhoe;
+
+        constructor(x, y) {
+            this.ten = x;
+            this.sucKhoe = y;
+        }
+
+        keu() {
+            document.write(this.ten + ": chít chít! RIP");
+        }
+
+        inRa() {
+            document.write(this.ten + ": " + this.sucKhoe + "<br>")
+        }
+    }
+
+    class Meo {
+        ten;
+        canNang;
+
+        constructor(t, cn) {
+            this.canNang = cn;
+            this.ten = t;
+        }
+
+        thit(ch) {
+            ch.sucKhoe = ch.sucKhoe - 10;
+            this.canNang += 5;
+            if (ch.sucKhoe < 0) {
+                ch.keu();
+            }
+        }
+
+        inRa() {
+            document.write(this.ten + ": " + this.canNang + "<br>")
+        }
+    }
+
+    let jerry1 = new Chuot('Jerry', 100000);
+    let uc = new Chuot('UCCC', 50);
+    let meo = new Meo("Tom", 70);
+    jerry1.inRa();
+    meo.thit(uc);
+    uc.inRa();
+    meo.inRa();
+    meo.thit(uc);
+    uc.inRa();
+    meo.inRa();
+
+</script>
+</body>
+</html>

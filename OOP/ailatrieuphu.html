@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    let question = {
+        title: "Ai giàu nhất?",
+        answer: "ABC"
+    }
+    let str = `<h2>${question.title}</h2><input type="text" id="tl"><button onclick="check()">Trả lời</button>`
+    document.getElementById('game').innerHTML = str;
+    function check () {
+        if (document.getElementById('tl').value == question.answer) {
+            alert("Thắng rồi!")
+            let str = `<h2>ABC</h2><input type="text" id="tl"><button onclick="check()">Trả lời</button>`
+        }
+    }
+</script>
+</body>
+</html>

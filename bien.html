@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="huong">
+<input type="text" id="tung">
+<h1 onclick="an()">Ấn</h1>
+<p onclick="tru()">Ấn đi</p>
+<h1 id="hung"></h1>
+<script>
+    let hoa = document.getElementById('huong');
+    let dat = document.getElementById('tung');
+    let hung = document.getElementById('hung');
+    function an() {
+        hung.innerHTML = +hoa.value + (+dat.value);
+    }
+    function tru() {
+        alert(+hoa.value - (+dat.value))
+    }
+</script>
+</body>
+</html>

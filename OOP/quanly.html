@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ThanhPho {
+        ten;
+        gdp;
+        danSo;
+
+        constructor(ten, gdp, danSo) {
+            this.danSo = danSo;
+            this.ten = ten;
+            this.gdp = gdp;
+        }
+
+        hienThi() {
+            document.write(this.ten + " " + this.danSo + " " + this.gdp)
+        }
+    }
+
+    class HocVien {
+        ten;
+        tuoi;
+        thanhPho;
+
+        constructor(ten, tuoi, thanhPho) {
+            this.tuoi = tuoi;
+            this.ten = ten;
+            this.thanhPho = thanhPho;
+        }
+
+        hienThiHV() {
+            document.write("<br>" + this.ten + " " + this.tuoi + " ");
+            this.thanhPho.hienThi();
+        }
+    }
+
+    let tb = new ThanhPho("Thái Bình", 1000, 7.8);
+    let hn = new ThanhPho("Hà Nội", 7000, 17.8);
+    let hv1 = new HocVien("NA", 23, tb);
+    let hv2 = new HocVien("Hung", 28, tb);
+    let hv3 = new HocVien("Long", 26, hn);
+    hv1.hienThiHV();
+    hv2.hienThiHV();
+    hv3.hienThiHV();
+</script>
+</body>
+</html>

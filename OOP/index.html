@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Meo {
+        ten;
+        loai;
+        long;
+
+        constructor(a,b,c) {
+            this.ten = a;
+            this.loai = b;
+            this.long = c;
+        }
+
+        keu() {
+            document.write('Meo Meo');
+        }
+
+        inThongTin() {
+            alert(this.ten +" "+this.loai+" "+this.long);
+        }
+    }
+
+    let meoCuaLong = new Meo("Ha", "Mướp", "Xám xù");
+    meoCuaLong.inThongTin();
+
+    let meoCuaManh = new Meo("Hi", "Anh lông ngắn", "Đen");
+    meoCuaManh.inThongTin();
+
+    //    thay loại = mướp, thay long = xám xù, alert 1 dòng gồm đầy đủ thông tin của đối tượng
+</script>
+</body>
+</html>

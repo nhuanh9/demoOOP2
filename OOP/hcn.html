@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Question {
+        id;
+        title;
+        answer;
+
+        constructor(a,b,c) {
+        }
+
+        check(a) {
+           if (this.answer == a) {
+               alert("Thắng rồi bro!");
+           }
+        }
+    }
+
+    let listOfQuestion = ["Bạn tên gì?", "Ở đâu?"];
+    let listOfAnswer = ["C0222H1", "CG"];
+
+    let arr = [];
+    arr.push(new Question(1, "bạn tên gì?", "ở đẩu"));
+    arr.push(new Question(1, "bạn tên gì?", "ở đẩu"));
+    arr.push(new Question(1, "bạn tên gì?", "ở đẩu"));
+</script>
+</body>
+</html>
